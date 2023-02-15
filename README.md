@@ -1,4 +1,4 @@
-#TIC-TAC-TOE React App (*Coder Notes*)
+# TIC-TAC-TOE React App (*Coder Notes*)
 This are the notes, which, as I wrote down, helped me to get a grasp of what was going on at every click, or function call.
 Understand the flow click by click, function by function, line by line...
 
