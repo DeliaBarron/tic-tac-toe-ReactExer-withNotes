@@ -94,6 +94,7 @@ function Board({ xIsNext, currentSquares, onPlay }) {
 
     function jumpToMove(moveIndex){
       setCurrentMove(moveIndex)
+      console.log(history)
       /*0 % 2 =0 true xIsNext
         1 % 2 =1 false !xIsNext
         2 % 2 =0 true xIsNext
@@ -101,16 +102,18 @@ function Board({ xIsNext, currentSquares, onPlay }) {
     }
     const moves = history.map((squares, moveIndex) => {
       let description
-      console.log(squares)
+      console.log('history map element',squares, moveIndex)
       if(moveIndex > 0){
-        description ='Go to move #'+ moveIndex
-      }
-      else{
-        description= 'Go to game start'
+        description='Go to move: '+moveIndex
+      } else if(moveIndex===0){
+        description='Go to start game'
       }
       return (
-        <li key={moveIndex}>
-          <button onClick={() => jumpToMove(moveIndex)}>{description}</button>
+        <li key={moveIndex}>{
+          currentMove===moveIndex?
+            <span className="actual-move">{'You are at move: '+currentMove}</span>:
+           <button className="jump-btn" onClick={() => jumpToMove(moveIndex)}>{description}</button>
+        }
         </li>
       )
     })
