@@ -20,7 +20,7 @@ This way, every time the state ***squares*** in Board updates, the component Squ
 ___
 # Tic-Tac-Toe React APP (BETA DOCS /HOOKS)
 
-#### Line :one::eight: App.js 
+#### Line :eight: Board.jsx 
 ``` js
  if(currentSquares[i] || calculateWinner(currentSquares)){
       return;
@@ -32,7 +32,7 @@ In this case, we are checking if the square index (in the board state's array) h
 
 
 
-#### Line :two::one: App.js 
+#### Line :one::one: Board.jsx 
 ###### Immutability
 ``` js
 const nextSquares=currentSquares.slice()
@@ -45,7 +45,7 @@ So that we get copies of the newer Board's state and keep track on them later.
 
 **More info about *history* and *currentMove* later on this README.md.**
 
-#### Line :five::nine: App.js 
+#### Line :five::three: Board.jsx 
 ###### calculateWinner(currentSquares)
 ```js
   function calculateWinner(currentSquares){
@@ -76,7 +76,7 @@ So that we get copies of the newer Board's state and keep track on them later.
 `See handleSquareClick(i) section`
 
 
-#### App.js Line :zero::zero:
+#### Line :seven: Board.jsx
 ###### handleSquareClick(i)
 ```js
 function handleSquareClick(i){
@@ -117,7 +117,7 @@ const currentSquares = history[currentMove]
   &nbsp;&nbsp;&nbsp;&nbsp;**i** comes through as param from the clicked <Square/ > calling *handleSquareClick function*.
 - Call **onPlay** function passing nextSquares arr (copy of the currentSquares plus the new 'x' or 'o' values).
 
-#### Line :eight::six: App.js
+#### Line :one::six: Game.jsx
 ```js
 function handlePlay(nextSquares){
       const nextHistory = [...history.slice(0, currentMove + 1), nextSquares]
