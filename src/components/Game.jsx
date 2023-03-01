@@ -3,6 +3,7 @@ import { useState } from "react"
 //COMPONENTS
 import { Board } from "./Board.jsx"
 import {History} from "./History.jsx"
+
 export default function Game(){
     const [history, setHistory]=useState([Array(9).fill(null)])
     const [currentMove, setCurrentMove]= useState(0)
@@ -29,15 +30,7 @@ export default function Game(){
         1 % 2 =1 false !xIsNext
         2 % 2 =0 true xIsNext
       */
-    }
-
-    // function handleMovesOrder(){
-    //     console.log(moves)
-    //     const sortedMoves=[...moves].sort((a, b) => a > b ? 1: -1)
-    //     console.log(sortedMoves)
-    //     setHistory(sortedMoves)
-   
-    // }
+    } 
 
     return (
       <div className="game">

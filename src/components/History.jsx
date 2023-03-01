@@ -45,16 +45,16 @@ function renderList(history){
     let description
     console.log('history MAP ele/squares',squares, 'moveIndex: '+moveIndex)
     if(moveIndex > 0){
-      description='Go to move: '+moveIndex
+      description='GO TO MOVE: '+moveIndex
     } else if(moveIndex===0){
-      description='Go to start game'
+      description='GO TO GAME START '
     }
     return (
-      <li key={moveIndex}>{
+      <li className="mt-1" key={moveIndex}>{
         currentMove===moveIndex?
-          <button className="actual-move" onClick={() => jumpToMove(moveIndex)}>{'You are at move: '+ currentMove}</button>
+          <button className="actual-move px-2" onClick={() => jumpToMove(moveIndex)}>{'YOU ARE AT MOVE: '+ currentMove}</button>
           :
-         <button className="jump-btn" onClick={() => jumpToMove(moveIndex)}>{description}</button>
+         <button className="jump-btn px-2" onClick={() => jumpToMove(moveIndex)}>{description}</button>
       }
       </li>
     )
@@ -64,12 +64,15 @@ function renderList(history){
     function handleOrderToggle(){
         setOrder(!order)
     }
-
     
   return (
     <>
-    <button onClick={()=>{handleOrderToggle()}}>Toggle Moves Order</button>
-      <ol>{list}</ol> 
+    <div>
+    <button className="toggle-btn mb-2 py-2 px-3" onClick={()=>{handleOrderToggle()}}>TOGGLE MOVES ORDER</button>
+    </div>
+    <div>
+      <ul>{list}</ul> 
+    </div>
     </>
   )
 }
