@@ -4,7 +4,6 @@ import { Square } from './Square';
 //-->   FOR MOR INFO  ABOUT THIS FUNCTION GO TO README.md
 export const Board = ({ xIsNext, currentSquares, onPlay }) => {
   const [highlight, setHighlight]=useState('')
-
   useEffect(()=>{
     setHighlight(winner)
     console.log(winner)
@@ -24,11 +23,6 @@ export const Board = ({ xIsNext, currentSquares, onPlay }) => {
 //WINNER STATUS
 const winner= calculateWinner(currentSquares)
 let status
-// if(winner){
-//   status='WINNER: '+ winner
-// }else{
-//   status='NEXT PLAYER:'+ (xIsNext? 'X': 'O')
-// }
 switch (winner) {
   case 'X':
   case 'O':
@@ -38,12 +32,12 @@ switch (winner) {
     status='GAME RESULT: '+winner
     break;
   default:
-    status='NEXT PLAYER:'+ (xIsNext? 'X': 'O')
+    status='NEXT PLAYER: '+ (xIsNext? 'X': 'O')
     break;
 }
       return (
         <>
-          <div className="status">{status}</div>
+          <div className="status ps-2">{status}</div>
          <div className='board-row'>
           < Square value={currentSquares[0]} highlight={highlight} onSquareClick={()=>handleSquareClick(0)}/>
           < Square value={currentSquares[1]} highlight={highlight} onSquareClick={()=>handleSquareClick(1)}/>

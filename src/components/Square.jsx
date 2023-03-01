@@ -1,7 +1,6 @@
 import React from 'react'
 
 export const Square = ({value, onSquareClick,highlight}) => {
-
   return (
     value===highlight?
     <button

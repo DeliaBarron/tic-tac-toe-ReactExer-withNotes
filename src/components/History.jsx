@@ -67,11 +67,19 @@ function renderList(history){
     
   return (
     <>
-    <div>
-    <button className="toggle-btn mb-2 py-2 px-3" onClick={()=>{handleOrderToggle()}}>TOGGLE MOVES ORDER</button>
-    </div>
+        <div>
+      {
+        order?
+   <button className="toggle-btn mb-2 py-2 px-3" onClick={()=>{handleOrderToggle()}}>TOGGLE MOVES ORDER <i className="bi bi-arrow-up-short"></i></button>
+    :
+    <button className="toggle-btn mb-2 py-2 px-3" onClick={()=>{handleOrderToggle()}}>TOGGLE MOVES ORDER <i className="bi bi-arrow-down-short"></i></button>
+      }
+   </div>
     <div>
       <ul>{list}</ul> 
+    </div>
+    <div>
+      <button onClick={()=>{window.location.reload()}} className="start-btn py-3 px-3">START</button>
     </div>
     </>
   )

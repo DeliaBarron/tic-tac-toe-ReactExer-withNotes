@@ -5,13 +5,21 @@
     font-size: 20px;
     background:rgba(0, 0, 0);
   }
+  button{
+    border-color: gainsboro;
+    color:black;
+  }
+  .bi{
+    background: transparent;
+  }
+
   li{
     list-style: none;
   }
- 
+
   .square {
     background: #fff;
-    border: 1px solid #999;
+    border: 1px solid #3d3d3d;
     float: left;
     font-size: 5rem;
     font-weight: bold;
@@ -24,7 +32,7 @@
     width: 150px;
   }
   .status {
-    font-size: 1.5rem;
+    font-size: 2rem;
     background-color:gold;
     color: black;
   }
@@ -40,12 +48,10 @@
     height: 90vh;
   }  
   .game-board{
-    color: goldenrod;
     padding: 2%;
     border: 5px solid goldenrod;
 
   }
- 
   .game-history{
     display: flex;
     flex-direction: column;
@@ -54,21 +60,22 @@
     align-items:center;
     padding: 3%;
   }
+
   .actual-move{
-    border-color:aliceblue;
+    border-width: 5px;
     background-color:rgb(153, 255, 0);
-    color:black ;
   }
   .jump-btn{
-   border-color: aliceblue;
-   background-color:dodgerblue;
-   color:black;
+    border-width: 5px;
+    background-color:dodgerblue;
   }
   .toggle-btn{
-
-    border-color:aliceblue;
+    border-width: 7px;
     background-color: gold;
-    color:black;
+  }
+  .start-btn{
+    background-color: red;
+    border-width: 8px;
   }
   .highlight{
     background:red;
