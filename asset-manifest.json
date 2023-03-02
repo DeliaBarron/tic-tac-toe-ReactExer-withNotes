@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/tic-tac-toe-ReactExer-withNotes/static/css/main.0f5b9d74.css",
+    "main.js": "/tic-tac-toe-ReactExer-withNotes/static/js/main.a4146893.js",
+    "static/media/planets.png": "/tic-tac-toe-ReactExer-withNotes/static/media/planets.1f1e889e5e14dafeb3c4.png",
+    "static/media/bootstrap-icons.woff?": "/tic-tac-toe-ReactExer-withNotes/static/media/bootstrap-icons.6959d0d983ee318f8880.woff",
+    "static/media/bootstrap-icons.woff2?": "/tic-tac-toe-ReactExer-withNotes/static/media/bootstrap-icons.b2e5aab643c6f0fd2da6.woff2",
+    "index.html": "/tic-tac-toe-ReactExer-withNotes/index.html",
+    "main.0f5b9d74.css.map": "/tic-tac-toe-ReactExer-withNotes/static/css/main.0f5b9d74.css.map",
+    "main.a4146893.js.map": "/tic-tac-toe-ReactExer-withNotes/static/js/main.a4146893.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.0f5b9d74.css",
+    "static/js/main.a4146893.js"
+  ]
+}
