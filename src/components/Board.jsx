@@ -29,7 +29,7 @@ switch (winner) {
     status='WINNER: '+ winner
     break;
   case `CAT'S GAME`:
-    status='GAME RESULT: '+winner
+    status=winner
     break;
   default:
     status='NEXT PLAYER: '+ (xIsNext? 'X': 'O')
