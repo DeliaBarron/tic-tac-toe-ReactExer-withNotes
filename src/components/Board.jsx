@@ -8,6 +8,7 @@ export const Board = ({ xIsNext, currentSquares, onPlay }) => {
     setHighlight(winner)
     console.log(winner)
   })
+  //---> FOR MOR INFO  ABOUT THIS FUNCTION GO TO README.md
     function handleSquareClick(i){
       if(currentSquares[i] || calculateWinner(currentSquares)){
         return;
@@ -74,7 +75,7 @@ function calculateWinner(currentSquares){
   for(let i=0; i<lines.length; i++){
     const [a,b,c]=lines[i]
     if(currentSquares[a] && currentSquares[a]=== currentSquares[b] && currentSquares[a]=== currentSquares[c]){
-      console.log('a, b, c current squares @ calculateWinner: ',currentSquares[a], currentSquares[b], currentSquares[c])
+      //console.log('a, b, c current squares @ calculateWinner: ',currentSquares[a], currentSquares[b], currentSquares[c])
       return currentSquares[a]
     }else if(currentSquares.every((square)=>square!== null)){
       return `CAT'S GAME`
